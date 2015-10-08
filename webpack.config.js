@@ -23,11 +23,12 @@ module.exports = {
       { test: /\.svg$/,    loader: "file-loader?prefix=font/" },
 
       // required for react jsx
-      {test: /\.js?$/, exclude: /node_modules/, loaders: ['babel']},
-      {test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel']}
+      {test: /\.js?$/, include: path.join(__dirname, 'src'), loaders: ['react-hot', 'babel']},
+      {test: /\.jsx?$/, include: path.join(__dirname, 'src'), loaders: ['react-hot', 'babel']}
     ]
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
   ]
 };
