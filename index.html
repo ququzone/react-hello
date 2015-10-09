@@ -3,9 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <title>Hello React!</title>
+    <style>
+      .color-bar {
+        list-style: none;
+      }
+      .color-bar li {
+        display: inline-block;
+        margin-left: 10px;
+        height: 50px;
+        width: 50px;
+      }
+      .color-bar .red {
+        background-color: red;
+      }
+      .color-bar .blue {
+        background-color: blue;
+      }
+      .color-bar .black {
+        background-color: black;
+      }
+      .color-bar .green {
+        background-color: green;
+      }
+      .color-block span {
+        padding: 10px 20px;
+        border: 2px solid #ccc;
+      }
+      .color-block .red {
+        color: red;
+      }
+      .color-block .blue {
+        color: blue;
+      }
+      .color-block .black {
+        color: black;
+      }
+      .color-block .green {
+        color: green;
+      }
+    </style>
   </head>
   <body>
     <div id="example"></div>
-  <script src="dist/app.js"></script>
+    <div id="color-panel"></div>
+    <script src="dist/app.js"></script>
   </body>
 </html>
