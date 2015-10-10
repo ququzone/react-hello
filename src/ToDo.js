@@ -17,7 +17,7 @@ var ToDoList = React.createClass({
 var ToDoApp = React.createClass({
   getInitialState: function() {
     return {
-      items:['dd', 'd2'],
+      items:[],
       text:'' 
     };
   },
