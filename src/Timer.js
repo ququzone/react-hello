@@ -14,7 +14,11 @@ var Timer = React.createClass({
   },
 
   componentDidMount: function() {
-    setInterval(this.tick, 1000);
+    this.interval = setInterval(this.tick, 1000);
+  },
+
+  componentWillUnmount: function() {
+    clearInterval(this.interval);
   },
 
   render: function() {
